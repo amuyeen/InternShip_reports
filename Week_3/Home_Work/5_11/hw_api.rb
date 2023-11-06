@@ -1,80 +1,45 @@
-# frozen_string_literal: true
-
-require 'faraday'
-# class user
-class User
-  attr_reader :name, :avatar, :sex
-
-  def initialize(hash)
-    @name = hash['name']
-    @avatar = hash['avatar']
-    @sex = hash['sex']
-    @created_at = DateTime.now.to_s
+class API
+  def initialize(connect)
+    @connect = Faraday.new(connect)
+    @response = ''
   end
 
-  def create_user
-    response = url.post do |req|
-      req.headers['Content-Type'] = 'application/json'
-      req.body = to_json
+  def active_user
+    @response = @connect.get do |req|
+      req.url '/users'
+      req.params['active'] = true
     end
-    response.status == 201 || response.status == 200 ? 'created successfully' : 'failed to create user create'
-  end
-
-  def update_user(id, other)
-    response = url.put do |req|
-      req.url id.to_s
-      req.headers['Content-Type'] = 'application/json'
-      req.body = other.to_json
-    end
-    response.status == 201 || response.status == 200 ? 'update successfully' : 'failed to update user '
   end
 
   def delete_user(id)
-    response = url.delete do |req|
-      req.url id.to_s
+
+    @connect.delete("/users/#{id}")
+  end
+
+  def create_user(hash)
+    @response = @connect.post do |req|
+      req.url 'users'
       req.headers['Content-Type'] = 'application/json'
-    end
-    response.status == 201 || response.status == 200 ? 'deleted successfully' : 'failed to delete user'
-  end
-
-  def get_list_user(condition, value)
-    response = url.get do |req|
-      check_params(condition, value, req)
-    end
-    response.status == 201 || response.status == 200 ? response : 'failed to get list user'
-  end
-
-  private
-
-  def check_params(condition, value, req)
-    case condition
-    when 'active'
-      req.params['active'] = value
-    when 'sex'
-      req.params['sex'] = value
-    when 'id'
-      req.params['id'] = value
+      req.body = JSON.generate(hash)
     end
   end
 
-  def to_json(*_args)
-    {
-      name: @name,
-      avatar: @avatar,
-      sex: @sex,
-      created_at: @created_at
-    }.to_json
-  end
-
-  def url
-    Faraday.new(url: 'https://6418014ee038c43f38c45529.mockapi.io/api/v1/users')
+  def print_user
+    if @response.success?
+      users = JSON.parse(@response.body)
+      users.each do |user|
+        puts "ID: #{user['id']},\nTên: #{user['name']},\nGiới tính: #{user['sex']},\n" \
+   "Trạng thái: #{user['active']},\nNgày tạo: #{user['created_at']},\n" \
+   "Hình ảnh: #{user['avatar']}\n\n"
+      end
+    else
+      puts 'Error: User do not find'
+    end
   end
 end
 
-User.new({
-           'name' => 'Nguyen',
-           'sex' => 'male',
-           'avatar' => 'https://duhocvietglobal.com/wp-content/uploads/2018/12/dat-nuoc-va-con-nguoi-anh-quoc.jpg'
-         })
-
-end
+api = API.new('https://6418014ee038c43f38c45529.mockapi.io/api/v1/')
+api.active_user
+api.print_user
+api.delete_user('211')
+api.create_user({ name: 'Nguyen', avatar: nil, sex: 'male', active: false })
