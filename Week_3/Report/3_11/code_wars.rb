@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 code_wars.rb
 
 # Tạo một hàm nhận Chuỗi đầu vào và trả về một Chuỗi, trong đó tất cả các từ viết hoa của Chuỗi đầu vào ở phía trước và tất cả các từ viết thường ở cuối. Thứ tự của các từ viết hoa và viết thường phải theo thứ tự xuất hiện của chúng.
@@ -7,12 +9,11 @@ code_wars.rb
 
 def capitals_first(string)
   valid_words = string.split(' ').select { |w| w =~ /\A[a-z]/i }
-  valid_words.partition {|w| w =~ /\A[A-Z]/}.flatten.join(' ')
+  valid_words.partition { |w| w =~ /\A[A-Z]/ }.flatten.join(' ')
 end
 
-
 # Cho một chuỗi s. Bạn phải trả về một chuỗi khác sao cho các ký tự được lập chỉ mục chẵn và lập chỉ mục lẻ của s được nhóm lại và các nhóm được phân tách bằng dấu cách (xem mẫu bên dưới)
-#đầu vào: 'CodeWars'
+# đầu vào: 'CodeWars'
 # đầu ra 'CdWr oeas'
 # S[0] = 'C'
 # S[1] = 'o'
@@ -26,14 +27,14 @@ end
 def sort_my_string(s)
   even_chars = []
   odd_chars = []
-  s.chars.each_with_index do |char,index|
-    if index.even? 
+  s.chars.each_with_index do |char, index|
+    if index.even?
       even_chars << char
     else
       odd_chars << char
     end
   end
-  even_chars.join + " " +   odd_chars.join 
+  "#{even_chars.join} #{odd_chars.join}"
 end
 
 # Sorting the Odd way!
@@ -42,10 +43,10 @@ end
 
 # c1
 def sort_it_out(array)
-   odd_numbers = []
-  even_numbers=[]
+  odd_numbers = []
+  even_numbers = []
   array.each do |number|
-    if number.floor % 2 == 0
+    if number.floor.even?
       even_numbers << number
     else
       odd_numbers << number
@@ -55,22 +56,19 @@ def sort_it_out(array)
   even_numbers.sort!.reverse!
   odd_numbers.sort!
 
-  return odd_numbers + even_numbers
+  odd_numbers + even_numbers
 end
 
 # c2
-def sort_it_out array
-    odd, even = array.partition{|n| n.to_i.odd?}
-    odd.sort + even.sort.reverse
+def sort_it_out(array)
+  odd, even = array.partition { |n| n.to_i.odd? }
+  odd.sort + even.sort.reverse
 end
-
-
 
 # Viết chương trình xuất ra n phần tử đầu tiên của một danh sách.
 # largest(2, [7,6,5,4,3,2,1])
 # => [6,7]
 
-def largest(n,xs)
-	xs.max(n).sort
+def largest(number, array)
+  array.max(number).sort
 end
-
