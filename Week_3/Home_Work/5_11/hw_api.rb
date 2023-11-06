@@ -1,40 +1,80 @@
 # frozen_string_literal: true
 
-hw_api.rb
-
 require 'faraday'
+# class user
+class User
+  attr_reader :name, :avatar, :sex
 
-conn = Faraday.new(url: 'https://6418014ee038c43f38c45529.mockapi.io/api/v1/users')
+  def initialize(hash)
+    @name = hash['name']
+    @avatar = hash['avatar']
+    @sex = hash['sex']
+    @created_at = DateTime.now.to_s
+  end
 
-# # lay thong tin user
-response = conn.get do |req|
-  req.params['active'] = 'true'
+  def create_user
+    response = url.post do |req|
+      req.headers['Content-Type'] = 'application/json'
+      req.body = to_json
+    end
+    response.status == 201 || response.status == 200 ? 'created successfully' : 'failed to create user create'
+  end
+
+  def update_user(id, other)
+    response = url.put do |req|
+      req.url id.to_s
+      req.headers['Content-Type'] = 'application/json'
+      req.body = other.to_json
+    end
+    response.status == 201 || response.status == 200 ? 'update successfully' : 'failed to update user '
+  end
+
+  def delete_user(id)
+    response = url.delete do |req|
+      req.url id.to_s
+      req.headers['Content-Type'] = 'application/json'
+    end
+    response.status == 201 || response.status == 200 ? 'deleted successfully' : 'failed to delete user'
+  end
+
+  def get_list_user(condition, value)
+    response = url.get do |req|
+      check_params(condition, value, req)
+    end
+    response.status == 201 || response.status == 200 ? response : 'failed to get list user'
+  end
+
+  private
+
+  def check_params(condition, value, req)
+    case condition
+    when 'active'
+      req.params['active'] = value
+    when 'sex'
+      req.params['sex'] = value
+    when 'id'
+      req.params['id'] = value
+    end
+  end
+
+  def to_json(*_args)
+    {
+      name: @name,
+      avatar: @avatar,
+      sex: @sex,
+      created_at: @created_at
+    }.to_json
+  end
+
+  def url
+    Faraday.new(url: 'https://6418014ee038c43f38c45529.mockapi.io/api/v1/users')
+  end
 end
 
-p response
+User.new({
+           'name' => 'Nguyen',
+           'sex' => 'male',
+           'avatar' => 'https://duhocvietglobal.com/wp-content/uploads/2018/12/dat-nuoc-va-con-nguoi-anh-quoc.jpg'
+         })
 
-tao user
-
-user = {
-  'name' => 'Nguyen',
-  'sex' => 'male',
-  'created_at' => DateTime.now.to_s,
-  'avatar' => 'https://www.google.com/search?q=aure&sca_esv=579669660&hl=vi&tbm=isch&sxsrf=AM9HkKlaBBScaf9J_1VmnW2S5iVeVQeVUg:1699231424641&source=lnms&sa=X&ved=2ahUKEwibyNOrkq6CAxXG4jgGHZ06A1MQ_AUoAXoECAIQAw&biw=1633&bih=928&dpr=1.8#imgrc=EMR9t26VaUFrpM'
-}
-
-respone = conn.post do |req|
-  req.headers['Content-Type'] = 'application/json'
-  req.body = user.to_json
-end
-p respone
-
-# xoa user
-
-user_id = 188
-response = conn.delete "/users/#{user_id}"
-
-if response.status == 200
-  puts "Người dùng với ID #{user_id} đã được xóa thành công."
-else
-  puts 'Không thể xóa người dùng.'
 end
