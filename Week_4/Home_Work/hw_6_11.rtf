@@ -1,0 +1,657 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2708
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Medium;\f1\fnil\fcharset0 HelveticaNeue;\f2\fmodern\fcharset0 Courier;
+\f3\fswiss\fcharset0 ArialMT;\f4\froman\fcharset0 Times-Roman;\f5\fswiss\fcharset0 Arial-BoldMT;
+}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red26\green26\blue29;\red0\green0\blue0;
+\red226\green229\blue232;\red255\green255\blue255;\red220\green220\blue220;\red16\green16\blue16;\red0\green0\blue0;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c13333\c13725\c15294;\cssrgb\c0\c0\c0;
+\cssrgb\c90980\c91765\c92941;\cssrgb\c100000\c100000\c99971;\cssrgb\c89020\c89020\c89020;\cssrgb\c7451\c7451\c7843;\cssrgb\c0\c1\c1;
+\cssrgb\c100000\c100000\c99985;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Instance variable
+\f1  l\'e0 bi\uc0\u7871 n \u273 \u432 \u7907 c khai b\'e1o b\'ean ngo\'e0i method, constructor, ho\u7863 c block trong m\u7897 t class. Instance variable \u273 \u432 \u7907 c li\'ean k\u7871 t v\u7899 i t\u7915 ng instance c\u7911 a class \u273 \'f3.\cb1 \
+
+\f0 \cb3 Class variable
+\f1  l\'e0 bi\uc0\u7871 n \u273 \u432 \u7907 c khai b\'e1o b\'ean trong method, constructor, ho\u7863 c block trong m\u7897 t class, v\u7899 i t\u7915  kh\'f3a 
+\f2\fs21 class_variable_get()
+\f1\fs24 . Class variable \uc0\u273 \u432 \u7907 c li\'ean k\u7871 t v\u7899 i class \u273 \'f3, ch\u7913  kh\'f4ng ph\u7843 i v\u7899 i t\u7915 ng instance c\u7911 a class \u273 \'f3.\cb1 \
+
+\f0 \cb3 So s\'e1nh gi\uc0\u7919 a instance variable v\'e0 class variable trong Ruby
+\f1 \cb1 \
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1793\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt370 \clpadl320 \clpadb370 \clpadr320 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth6161\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt370 \clpadl320 \clpadb370 \clpadr320 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth9166\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt370 \clpadl320 \clpadb370 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf2 \cb3 \strokec4 \uc0\u272 \u7863 c \u273 i\u7875 m\cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Instance variable\cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Class variable\cf0 \cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1793\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth6161\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth9166\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 V\uc0\u7883  tr\'ed khai b\'e1o
+\f1 \cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 B\'ean ngo\'e0i method, constructor, ho\uc0\u7863 c block\cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 B\'ean trong method, constructor, ho\uc0\u7863 c block, v\u7899 i t\u7915  kh\'f3a\'a0
+\f2 class_variable_get()
+\f1 \cf0 \cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1793\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth6161\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth9166\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0 \cf2 \cb3 Li\'ean k\uc0\u7871 t
+\f1 \cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Li\'ean k\uc0\u7871 t v\u7899 i t\u7915 ng instance c\u7911 a class\cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Li\'ean k\uc0\u7871 t v\u7899 i class\cf0 \cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1793\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth6161\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth9166\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0 \cf2 \cb3 Gi\'e1 tr\uc0\u7883  m\u7863 c \u273 \u7883 nh
+\f1 \cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Kh\'f4ng c\'f3 gi\'e1 tr\uc0\u7883  m\u7863 c \u273 \u7883 nh\cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 Gi\'e1 tr\uc0\u7883  m\u7863 c \u273 \u7883 nh c\u7911 a ki\u7875 u d\u7919  li\u7879 u t\u432 \u417 ng \u7913 ng\cf0 \cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1793\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth6161\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth9166\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0 \cf2 \cb3 Thay \uc0\u273 \u7893 i
+\f1 \cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 C\'f3 th\uc0\u7875  \u273 \u432 \u7907 c thay \u273 \u7893 i b\u7903 i c\'e1c ph\u432 \u417 ng th\u7913 c c\u7911 a instance\cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 C\'f3 th\uc0\u7875  \u273 \u432 \u7907 c thay \u273 \u7893 i b\u7903 i c\'e1c ph\u432 \u417 ng th\u7913 c c\u7911 a class\cf0 \cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1793\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth6161\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth9166\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0 \cf2 \cb3 Truy c\uc0\u7853 p
+\f1 \cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 C\'f3 th\uc0\u7875  \u273 \u432 \u7907 c truy c\u7853 p b\u7903 i c\'e1c ph\u432 \u417 ng th\u7913 c c\u7911 a instance\cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+\cf2 \cb3 C\'f3 th\uc0\u7875  \u273 \u432 \u7907 c truy c\u7853 p b\u7903 i c\'e1c ph\u432 \u417 ng th\u7913 c c\u7911 a class\cf0 \cb1 \cell \row
+
+\itap1\trowd \taflags0 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalc \clshdrawnil \clwWidth1793\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx2880
+\clvertalc \clshdrawnil \clwWidth6161\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx5760
+\clvertalc \clshdrawnil \clwWidth9166\clftsWidth3 \clmart10 \clmarl10 \clmarb10 \clmarr10 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt320 \clpadl320 \clpadb320 \clpadr320 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f0 \cf2 \cb3 V\'ed d\uc0\u7909 
+\f1 \cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \cb3 name
+\f1 \'a0trong class\'a0
+\f2 Person
+\f1 \cf0 \cb1 \cell 
+\pard\intbl\itap1\pardeftab720\partightenfactor0
+
+\f2 \cf2 \cb3 PI
+\f1 \'a0trong class\'a0
+\f2 Math
+\f1 \cf0 \cb1 \cell \lastrow\row
+\pard\pardeftab720\qc\partightenfactor0
+
+\f3 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \strokec5 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\f4\fs48 \AppleTypeServices \cf5 \cb3 drive_spreadsheet
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf5 \cb3 Xu\uc0\u7845 t sang Trang t\'ednh\cb1 \
+\
+\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f0\fs24 \AppleTypeServices \cf2 \cb3 \strokec2 L\uc0\u7921 a ch\u7885 n s\u7917  d\u7909 ng instance variable hay class variable trong Ruby
+\f1 \cb1 \
+\pard\pardeftab720\sa480\partightenfactor0
+\cf2 \cb3 Vi\uc0\u7879 c l\u7921 a ch\u7885 n s\u7917  d\u7909 ng instance variable hay class variable trong Ruby c\u361 ng ph\u7909  thu\u7897 c v\'e0o m\u7909 c \u273 \'edch s\u7917  d\u7909 ng. N\u7871 u bi\u7871 n c\u7847 n \u273 \u432 \u7907 c li\'ean k\u7871 t v\u7899 i t\u7915 ng instance c\u7911 a class, th\'ec n\'ean s\u7917  d\u7909 ng instance variable. N\u7871 u bi\u7871 n c\u7847 n \u273 \u432 \u7907 c li\'ean k\u7871 t v\u7899 i class, th\'ec n\'ean s\u7917  d\u7909 ng class variable.\cb1 \
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f0 \cf2 \cb3 V\'ed d\uc0\u7909  v\u7873  vi\u7879 c s\u7917  d\u7909 ng instance variable
+\f1 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf2 \cb3 Ruby\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs19\fsmilli9692 \cf2 \cb3 class Person\
+  attr_accessor :name\
+\
+  def initialize(name)\
+    @name = name\
+  end\
+\
+  def greet\
+    "Hello, my name is #\{name\}."\
+  end\
+end\
+\
+person1 = Person.new("John Doe")\
+person2 = Person.new("Jane Doe")\
+\
+p person1.name\
+# Output: "John Doe"\
+\
+p person2.name\
+# Output: "Jane Doe"\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs18 \AppleTypeServices\AppleTypeServicesF65539 \cf2 Vui l\'f2ng th\uc0\u7853 n tr\u7885 ng khi s\u7917  d\u7909 ng m\'e3.\'a0
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb1 \strokec5 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf5 \
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs24 \AppleTypeServices \cf2 \cb3 \strokec2 Trong v\'ed d\uc0\u7909  n\'e0y, bi\u7871 n 
+\f2\fs21 name
+\f1\fs24  l\'e0 m\uc0\u7897 t instance variable, v\'ec n\'f3 \u273 \u432 \u7907 c khai b\'e1o b\'ean ngo\'e0i method 
+\f2\fs21 initialize()
+\f1\fs24 . Bi\uc0\u7871 n 
+\f2\fs21 name
+\f1\fs24  \uc0\u273 \u432 \u7907 c li\'ean k\u7871 t v\u7899 i t\u7915 ng instance c\u7911 a class 
+\f2\fs21 Person
+\f1\fs24 . V\'ec v\uc0\u7853 y, khi ch\'fang ta t\u7841 o hai instance c\u7911 a class 
+\f2\fs21 Person
+\f1\fs24 , m\uc0\u7895 i instance s\u7869  c\'f3 m\u7897 t bi\u7871 n 
+\f2\fs21 name
+\f1\fs24  ri\'eang c\uc0\u7911 a n\'f3.\cb1 \
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f0 \cf2 \cb3 V\'ed d\uc0\u7909  v\u7873  vi\u7879 c s\u7917  d\u7909 ng class variable
+\f1 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf2 \cb3 Ruby\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs19\fsmilli9692 \cf2 \cb3 class Math\
+  PI = 3.14159\
+\
+  def calculate_circle_area(radius)\
+    PI * radius ** 2\
+  end\
+end\
+\
+p Math::PI\
+# Output: 3.14159\
+\
+p Math.calculate_circle_area(5)\
+# Output: 78.53981633974483\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs18 \AppleTypeServices\AppleTypeServicesF65539 \cf2 Vui l\'f2ng th\uc0\u7853 n tr\u7885 ng khi s\u7917  d\u7909 ng m\'e3.\'a0\cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \strokec5 \
+\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs24 \AppleTypeServices \cf2 \cb3 \strokec2 Trong v\'ed d\uc0\u7909  n\'e0y, bi\u7871 n 
+\f2\fs21 PI
+\f1\fs24  l\'e0 m\uc0\u7897 t class variable, v\'ec n\'f3 \u273 \u432 \u7907 c khai b\'e1o b\'ean trong method 
+\f2\fs21 initialize()
+\f1\fs24  v\uc0\u7899 i t\u7915  kh\'f3a 
+\f2\fs21 class_variable_get()
+\f1\fs24 . Bi\uc0\u7871 n 
+\f2\fs21 PI
+\f1\fs24  \uc0\u273 \u432 \u7907 c li\'ean k\u7871 t v\u7899 i class 
+\f2\fs21 Math
+\f1\fs24 , ch\uc0\u7913  kh\'f4ng ph\u7843 i v\u7899 i t\u7915 ng instance c\u7911 a class \u273 \'f3. V\'ec v\u7853 y, khi ch\'fang ta truy c\u7853 p bi\u7871 n 
+\f2\fs21 PI
+\f1\fs24 , ch\'fang ta c\'f3 th\uc0\u7875  truy c\u7853 p n\'f3 t\u7915  b\u7845 t k\u7923  instance n\'e0o c\u7911 a class 
+\f2\fs21 Math
+\f1\fs24 .
+\f4 \cb1 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \
+\pard\pardeftab720\sa480\partightenfactor0
+
+\fs40 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \strokec6 attr_accessor :\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs32 \AppleTypeServices \cf7 \cb8 \strokec7 Trong Ruby, 
+\f2\fs21 attr_writer
+\f1\fs32  l\'e0 m\uc0\u7897 t macro d\'f9ng \u273 \u7875  t\u7841 o ra m\u7897 t ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs32  cho m\uc0\u7897 t bi\u7871 n instance. Ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs32  \uc0\u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  thay \u273 \u7893 i gi\'e1 tr\u7883  c\u7911 a bi\u7871 n.\
+V\'ed d\uc0\u7909 :\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf7 Ruby\cb1 \
+
+\f2 \cb8 class Person\
+  attr_writer :name\
+\
+  def initialize(name)\
+    @name = name\
+  end\
+\
+  def greet\
+    "Hello, my name is #\{name\}."\
+  end\
+end\
+\
+person1 = Person.new("John Doe")\
+\
+person1.name = "Jane Doe"\
+\
+p person1.name\
+# Output: "Jane Doe"
+\f3 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb1 \strokec5 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf5 \
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs32 \AppleTypeServices \cf7 \cb8 \strokec7 Trong v\'ed d\uc0\u7909  n\'e0y, macro 
+\f2\fs21 attr_writer
+\f1\fs32  \uc0\u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  t\u7841 o ra m\u7897 t ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs32  cho bi\uc0\u7871 n 
+\f2\fs21 name
+\f1\fs32 . Ph\uc0\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs32  \uc0\u273 \u432 \u7907 c g\u7885 i l\'e0 
+\f2\fs21 name=
+\f1\fs32 .\
+Ch\'fang ta c\'f3 th\uc0\u7875  s\u7917  d\u7909 ng macro 
+\f2\fs21 attr_writer
+\f1\fs32  v\uc0\u7899 i m\u7897 t ho\u7863 c nhi\u7873 u bi\u7871 n instance. V\'ed d\u7909 :\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf7 Ruby\cb1 \
+
+\f2 \cb8 class Person\
+  attr_writer :name, :age\
+\
+  def initialize(name, age)\
+    @name = name\
+    @age = age\
+  end\
+\
+  def greet\
+    "Hello, my name is #\{name\} and I am #\{age\} years old."\
+  end\
+end\
+\
+person1 = Person.new("John Doe", 30)\
+\
+person1.name = "Jane Doe"\
+\
+p person1.name\
+# Output: "Jane Doe"\
+
+\f0\fs18 \AppleTypeServices\AppleTypeServicesF65539 Vui l\'f2ng th\uc0\u7853 n tr\u7885 ng khi s\u7917  d\u7909 ng m\'e3.
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb1 \strokec5 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf5 \
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs32 \AppleTypeServices \cf7 \cb8 \strokec7 Trong v\'ed d\uc0\u7909  n\'e0y, macro 
+\f2\fs21 attr_writer
+\f1\fs32  \uc0\u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  t\u7841 o ra m\u7897 t ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs32  cho bi\uc0\u7871 n 
+\f2\fs21 name
+\f1\fs32  v\'e0 
+\f2\fs21 age
+\f1\fs32 .\
+So v\uc0\u7899 i 
+\f2\fs21 attr_accessor
+\f1\fs32 , 
+\f2\fs21 attr_writer
+\f1\fs32  ch\uc0\u7881  t\u7841 o ra ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs32 , kh\'f4ng t\uc0\u7841 o ra ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 getter
+\f1\fs32 .\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f3\fs40 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb1 \strokec6 \
+
+\f5\b \AppleTypeServices\AppleTypeServicesF65539 \cf9 \strokec10 aatr_writer :\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\b0\fs24 \AppleTypeServices \cf2 \cb3 \strokec2 Trong Ruby, 
+\f2\fs21 attr_writer
+\f1\fs24  l\'e0 m\uc0\u7897 t macro d\'f9ng \u273 \u7875  t\u7841 o ra m\u7897 t ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs24  cho m\uc0\u7897 t bi\u7871 n instance. Ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs24  \uc0\u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  thay \u273 \u7893 i gi\'e1 tr\u7883  c\u7911 a bi\u7871 n.\cb1 \
+\cb3 V\'ed d\uc0\u7909 :\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf2 \cb3 Ruby\cb1 \
+
+\f2\fs19\fsmilli9692 \cb3 class Person\
+  attr_writer :name\
+\
+  def initialize(name)\
+    @name = name\
+  end\
+\
+  def greet\
+    "Hello, my name is #\{name\}."\
+  end\
+end\
+\
+person1 = Person.new("John Doe")\
+\
+person1.name = "Jane Doe"\
+\
+p person1.name\
+# Output: "Jane Doe"\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb1 \strokec5 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf5 \
+\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs24 \AppleTypeServices \cf2 \cb3 \strokec2 Trong v\'ed d\uc0\u7909  n\'e0y, macro 
+\f2\fs21 attr_writer
+\f1\fs24  \uc0\u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  t\u7841 o ra m\u7897 t ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs24  cho bi\uc0\u7871 n 
+\f2\fs21 name
+\f1\fs24 . Ph\uc0\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs24  \uc0\u273 \u432 \u7907 c g\u7885 i l\'e0 
+\f2\fs21 name=
+\f1\fs24 .\cb1 \
+\cb3 Ch\'fang ta c\'f3 th\uc0\u7875  s\u7917  d\u7909 ng macro 
+\f2\fs21 attr_writer
+\f1\fs24  v\uc0\u7899 i m\u7897 t ho\u7863 c nhi\u7873 u bi\u7871 n instance. V\'ed d\u7909 :\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf2 \cb3 Ruby\cb1 \
+
+\f2\fs19\fsmilli9692 \cb3 class Person\
+  attr_writer :name, :age\
+\
+  def initialize(name, age)\
+    @name = name\
+    @age = age\
+  end\
+\
+  def greet\
+    "Hello, my name is #\{name\} and I am #\{age\} years old."\
+  end\
+end\
+\
+person1 = Person.new("John Doe", 30)\
+\
+person1.name = "Jane Doe"\
+\
+p person1.name\
+# Output: "Jane Doe"\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb1 \strokec5 \
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs24 \AppleTypeServices \cf2 \cb3 \strokec2 Trong v\'ed d\uc0\u7909  n\'e0y, macro 
+\f2\fs21 attr_writer
+\f1\fs24  \uc0\u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  t\u7841 o ra m\u7897 t ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs24  cho bi\uc0\u7871 n 
+\f2\fs21 name
+\f1\fs24  v\'e0 
+\f2\fs21 age
+\f1\fs24 .\cb1 \
+\cb3 So v\uc0\u7899 i 
+\f2\fs21 attr_accessor
+\f1\fs24 , 
+\f2\fs21 attr_writer
+\f1\fs24  ch\uc0\u7881  t\u7841 o ra ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 setter
+\f1\fs24 , kh\'f4ng t\uc0\u7841 o ra ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 getter
+\f1\fs24 .
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\fs40 \AppleTypeServices\AppleTypeServicesF65539 \cf9 \strokec10 Private :\
+\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs32 \AppleTypeServices \cf7 \cb8 \strokec7 T\uc0\u7915  kh\'f3a 
+\f2\fs21 private
+\f1\fs32  trong Ruby \uc0\u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  quy \u273 \u7883 nh r\u7857 ng m\u7897 t ph\u432 \u417 ng th\u7913 c ch\u7881  c\'f3 th\u7875  \u273 \u432 \u7907 c g\u7885 i b\'ean trong class ch\u7913 a n\'f3. \u272 i\u7873 u n\'e0y c\'f3 ngh\u297 a l\'e0 ph\u432 \u417 ng th\u7913 c kh\'f4ng th\u7875  \u273 \u432 \u7907 c g\u7885 i t\u7915  b\'ean ngo\'e0i class, ngay c\u7843  khi s\u7917  d\u7909 ng \u273 \u7889 i t\u432 \u7907 ng c\u7911 a class \u273 \'f3.\
+M\uc0\u7897 t s\u7889  tr\u432 \u7901 ng h\u7907 p th\u432 \u7901 ng s\u7917  d\u7909 ng t\u7915  kh\'f3a 
+\f2\fs21 private
+\f1\fs32  bao g\uc0\u7891 m:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls1\ilvl0\cf7 \cb8 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 C\'e1c ph\uc0\u432 \u417 ng th\u7913 c \u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  tri\u7875 n khai n\u7897 i b\u7897  c\u7911 a class, ch\u7859 ng h\u7841 n nh\u432  c\'e1c ph\u432 \u417 ng th\u7913 c kh\u7903 i t\u7841 o v\'e0 h\u7911 y b\u7887 .\cb1 \
+\ls1\ilvl0\cb8 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 C\'e1c ph\uc0\u432 \u417 ng th\u7913 c \u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  truy c\u7853 p ho\u7863 c s\u7917 a \u273 \u7893 i tr\u7841 ng th\'e1i b\'ean trong c\u7911 a class, ch\u7859 ng h\u7841 n nh\u432  c\'e1c ph\u432 \u417 ng th\u7913 c l\u7845 y v\'e0 \u273 \u7863 t gi\'e1 tr\u7883  c\u7911 a bi\u7871 n instance.\cb1 \
+\ls1\ilvl0\cb8 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 C\'e1c ph\uc0\u432 \u417 ng th\u7913 c \u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  th\u7921 c hi\u7879 n c\'e1c ch\u7913 c n\u259 ng ph\u7909  tr\u7907 , ch\u7859 ng h\u7841 n nh\u432  c\'e1c ph\u432 \u417 ng th\u7913 c ki\u7875 m tra \u273 i\u7873 u ki\u7879 n ho\u7863 c chuy\u7875 n \u273 \u7893 i d\u7919  li\u7879 u.\cb1 \
+\pard\pardeftab720\sa480\partightenfactor0
+\cf7 \cb8 \strokec7 V\'ed d\uc0\u7909 :\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf7 Ruby\cb1 \
+
+\f2 \cb8 class Person\
+  private\
+\
+  def initialize(name, age)\
+    @name = name\
+    @age = age\
+  end\
+\
+  def validate_name\
+    raise ArgumentError, "Name cannot be empty" if @name.empty?\
+  end\
+\
+  def validate_age\
+    raise ArgumentError, "Age must be a positive integer" if @age <= 0\
+  end\
+\
+  public\
+\
+  def create\
+    validate_name\
+    validate_age\
+\
+    # T\uc0\u7841 o m\u7897 t person m\u7899 i\
+  end\
+end\
+\pard\pardeftab720\qc\partightenfactor0
+
+\f3 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb1 \strokec5 \
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs32 \AppleTypeServices \cf7 \cb8 \strokec7 Trong v\'ed d\uc0\u7909  n\'e0y, c\'e1c ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 initialize()
+\f1\fs32 , 
+\f2\fs21 validate_name()
+\f1\fs32 , v\'e0 
+\f2\fs21 validate_age()
+\f1\fs32  \uc0\u273 \u432 \u7907 c quy \u273 \u7883 nh l\'e0 
+\f2\fs21 private
+\f1\fs32 . \uc0\u272 i\u7873 u n\'e0y c\'f3 ngh\u297 a l\'e0 ch\'fang ch\u7881  c\'f3 th\u7875  \u273 \u432 \u7907 c g\u7885 i b\'ean trong class 
+\f2\fs21 Person
+\f1\fs32 . Ph\uc0\u432 \u417 ng th\u7913 c 
+\f2\fs21 create()
+\f1\fs32 , m\uc0\u7863 t kh\'e1c, \u273 \u432 \u7907 c quy \u273 \u7883 nh l\'e0 
+\f2\fs21 public
+\f1\fs32 . \uc0\u272 i\u7873 u n\'e0y c\'f3 ngh\u297 a l\'e0 n\'f3 c\'f3 th\u7875  \u273 \u432 \u7907 c g\u7885 i t\u7915  b\'ean ngo\'e0i class 
+\f2\fs21 Person
+\f1\fs32 .\
+B\uc0\u7857 ng c\'e1ch s\u7917  d\u7909 ng t\u7915  kh\'f3a 
+\f2\fs21 private
+\f1\fs32 , ch\'fang ta c\'f3 th\uc0\u7875  ng\u259 n c\'e1c ph\u432 \u417 ng th\u7913 c n\u7897 i b\u7897  c\u7911 a class b\u7883  g\u7885 i tr\u7921 c ti\u7871 p t\u7915  b\'ean ngo\'e0i class. \u272 i\u7873 u n\'e0y gi\'fap ch\'fang ta b\u7843 o v\u7879  tr\u7841 ng th\'e1i b\'ean trong c\u7911 a class v\'e0 \u273 \u7843 m b\u7843 o r\u7857 ng c\'e1c ph\u432 \u417 ng th\u7913 c n\u7897 i b\u7897  ch\u7881  \u273 \u432 \u7907 c s\u7917  d\u7909 ng theo c\'e1ch d\u7921  \u273 \u7883 nh.\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs48 \AppleTypeServices\AppleTypeServicesF65539 \cf9 \strokec10 Protected :\
+\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f2\fs21 \AppleTypeServices \cf2 \cb3 \strokec2 protected
+\f1\fs24  trong Ruby \uc0\u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  quy \u273 \u7883 nh r\u7857 ng m\u7897 t ph\u432 \u417 ng th\u7913 c ch\u7881  c\'f3 th\u7875  \u273 \u432 \u7907 c g\u7885 i b\'ean trong class ch\u7913 a n\'f3 ho\u7863 c c\'e1c subclass c\u7911 a n\'f3. \u272 i\u7873 u n\'e0y c\'f3 ngh\u297 a l\'e0 ph\u432 \u417 ng th\u7913 c c\'f3 th\u7875  \u273 \u432 \u7907 c g\u7885 i t\u7915  c\'e1c subclass c\u7911 a class \u273 \'f3, nh\u432 ng kh\'f4ng th\u7875  \u273 \u432 \u7907 c g\u7885 i t\u7915  b\'ean ngo\'e0i class ho\u7863 c c\'e1c subclass c\u7911 a n\'f3.\cb1 \
+\cb3 M\uc0\u7897 t s\u7889  tr\u432 \u7901 ng h\u7907 p th\u432 \u7901 ng s\u7917  d\u7909 ng t\u7915  kh\'f3a 
+\f2\fs21 protected
+\f1\fs24  bao g\uc0\u7891 m:\cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls2\ilvl0\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 C\'e1c ph\uc0\u432 \u417 ng th\u7913 c \u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  tri\u7875 n khai ch\u7913 c n\u259 ng c\u417  b\u7843 n c\u7911 a class, nh\u432 ng c\u7847 n \u273 \u432 \u7907 c t\'f9y ch\u7881 nh trong c\'e1c subclass.\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 C\'e1c ph\uc0\u432 \u417 ng th\u7913 c \u273 \u432 \u7907 c s\u7917  d\u7909 ng \u273 \u7875  truy c\u7853 p ho\u7863 c s\u7917 a \u273 \u7893 i tr\u7841 ng th\'e1i b\'ean trong c\u7911 a class, nh\u432 ng c\u7847 n \u273 \u432 \u7907 c b\u7843 o v\u7879  kh\u7887 i vi\u7879 c truy c\u7853 p tr\u7921 c ti\u7871 p t\u7915  b\'ean ngo\'e0i class.\cb1 \
+\pard\pardeftab720\sa480\partightenfactor0
+\cf2 \cb3 \strokec2 V\'ed d\uc0\u7909 :\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs21 \cf2 \cb3 Ruby\cb1 \
+
+\f2\fs19\fsmilli9692 \cb3 class Animal\
+  protected\
+\
+  def initialize(name)\
+    @name = name\
+  end\
+\
+  def speak\
+    raise NotImplementedError\
+  end\
+\
+  public\
+\
+  def name\
+    @name\
+  end\
+end\
+\
+class Dog < Animal\
+  def speak\
+    "Woof!"\
+  end\
+end\
+\
+class Cat < Animal\
+  def speak\
+    "Meow!"\
+  end\
+end\
+\
+dog = Dog.new("Fido")\
+cat = Cat.new("Garfield")\
+\
+puts dog.speak\
+# Output: Woof!\
+\
+puts cat.speak\
+# Output: Meow!\
+
+\f0\fs18 \AppleTypeServices\AppleTypeServicesF65539 Vui l\'f2ng th\uc0\u7853 n tr\u7885 ng khi s\u7917  d\u7909 ng m\'e3.\'a0
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb1 \strokec5 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf5 \
+\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f1\fs24 \AppleTypeServices \cf2 \cb3 \strokec2 Trong v\'ed d\uc0\u7909  n\'e0y, ph\u432 \u417 ng th\u7913 c 
+\f2\fs21 speak()
+\f1\fs24  \uc0\u273 \u432 \u7907 c quy \u273 \u7883 nh l\'e0 
+\f2\fs21 protected
+\f1\fs24  trong class 
+\f2\fs21 Animal
+\f1\fs24 . \uc0\u272 i\u7873 u n\'e0y c\'f3 ngh\u297 a l\'e0 n\'f3 c\'f3 th\u7875  \u273 \u432 \u7907 c g\u7885 i t\u7915  c\'e1c subclass c\u7911 a class 
+\f2\fs21 Animal
+\f1\fs24 , ch\uc0\u7859 ng h\u7841 n nh\u432  class 
+\f2\fs21 Dog
+\f1\fs24  v\'e0 
+\f2\fs21 Cat
+\f1\fs24 . Tuy nhi\'ean, n\'f3 kh\'f4ng th\uc0\u7875  \u273 \u432 \u7907 c g\u7885 i t\u7915  b\'ean ngo\'e0i class 
+\f2\fs21 Animal
+\f1\fs24  ho\uc0\u7863 c c\'e1c subclass c\u7911 a n\'f3.\cb1 \
+\cb3 B\uc0\u7857 ng c\'e1ch s\u7917  d\u7909 ng t\u7915  kh\'f3a 
+\f2\fs21 protected
+\f1\fs24 , ch\'fang ta c\'f3 th\uc0\u7875  cho ph\'e9p c\'e1c subclass c\u7911 a class s\u7917  d\u7909 ng c\'e1c ph\u432 \u417 ng th\u7913 c n\u7897 i b\u7897  c\u7911 a class, nh\u432 ng v\u7851 n ng\u259 n ch\'fang truy c\u7853 p tr\u7921 c ti\u7871 p v\'e0o tr\u7841 ng th\'e1i b\'ean trong c\u7911 a class. \u272 i\u7873 u n\'e0y gi\'fap ch\'fang ta b\u7843 o v\u7879  tr\u7841 ng th\'e1i b\'ean trong c\u7911 a class v\'e0 \u273 \u7843 m b\u7843 o r\u7857 ng c\'e1c ph\u432 \u417 ng th\u7913 c n\u7897 i b\u7897  ch\u7881  \u273 \u432 \u7907 c s\u7917  d\u7909 ng theo c\'e1ch d\u7921  \u273 \u7883 nh.\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f4 \cf2 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \AppleTypeServices \cf2 \
+\
+\
+\
+\pard\pardeftab720\sa480\partightenfactor0
+
+\f3\fs40 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\qc\partightenfactor0
+\cf2 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs40 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \
+\pard\pardeftab720\qc\partightenfactor0
+
+\fs21 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \AppleTypeServices \cf2 \
+\
+\
+\
+}
