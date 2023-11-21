@@ -13,6 +13,7 @@ class ClientsController < ApplicationController
   # GET /clients/new
   def new
     @client = Client.new
+    @client.build_address
   end
 
   # GET /clients/1/edit
@@ -65,6 +66,7 @@ class ClientsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def client_params
-      params.require(:client).permit(:first_name, :last_name)
+      params.require(:client).permit(:first_name, :last_name,
+                                     address_attributes: %i[street city zipcode])
     end
 end
